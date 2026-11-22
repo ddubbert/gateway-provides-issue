@@ -12,8 +12,8 @@ Federation (see
 
 | Folder | Role |
 |---|---|
-| `user_service/` | Federated service owning users |
-| `product_service/` | Federated service owning products, uses `@provides` on an interface |
+| `user_service/` | Federated service owning users: interface `User` with `Consumer` and `Producer` implementing it |
+| `product_service/` | Federated service owning products; `Product.producer` uses `@provides` on `Producer`, which implements the interface |
 | `gateway/` | Apollo Gateway composing both services |
 
 Run `npm install` and `npm start` in each folder, services first, then the
